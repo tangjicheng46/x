@@ -28,8 +28,7 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
     rm -rf /var/lib/apt/lists/*
 
 # 安装 FastAPI 和 Torch
-RUN conda install -y -c conda-forge fastapi && \
-    conda install -y -c pytorch torch
+RUN pip3 install --no-cache-dir fastapi uvicorn torch
 
 # 清理不需要的包和缓存
 RUN conda clean -a -y
