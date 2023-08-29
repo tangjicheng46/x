@@ -8,7 +8,7 @@ tokenizer = AutoTokenizer.from_pretrained("nlp-waseda/roberta-base-japanese", ca
 model = AutoModelForMaskedLM.from_pretrained("nlp-waseda/roberta-base-japanese", cache_dir=cache_dir)
 
 def embedding_func(text: str):
-    encoding = tokenizer(text, return_tensors='pt')
+    encoding = tokenizer([text,], return_tensors='pt')
     output = model(**encoding)
     return output
 
@@ -19,9 +19,10 @@ def benchmark(N, input_list, input_func, warmup=10):
 
     start_time = time.time()
 
-    for _ in range(N):
+    for i in range(N):
         for item in input_list:
             result = input_func(item)
+        print(f"{i}: {time.time()}")
 
     end_time = time.time()
 

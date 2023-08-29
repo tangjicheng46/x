@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gc3a-embedding-test-pod
+spec:
+  containers:
+    - name: main-container
+      image: tang2432/dev_cpu:1.1
+      resources:
+        requests:
+          memory: "2Gi"
+          cpu: "1"
+        limits:
+          memory: "2Gi"
+          cpu: "1"
