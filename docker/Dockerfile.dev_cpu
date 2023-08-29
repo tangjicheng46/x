@@ -24,7 +24,6 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
     /bin/bash /tmp/miniconda.sh -b -p $CONDA_HOME && \
     rm /tmp/miniconda.sh && \
     conda install -y python=3.10 && \
-    conda update -n base conda && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
