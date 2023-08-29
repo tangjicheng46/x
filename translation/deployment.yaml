@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: translator
-        image: tang2432/translation:latest
+        image: tang2432/translation:1.0
         ports:
         - containerPort: 8000
