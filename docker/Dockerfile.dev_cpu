@@ -35,6 +35,7 @@ RUN pip3 install --no-cache-dir torch torchvision torchaudio --index-url https:/
 RUN conda clean -a -y
 
 # 设置工作目录
+RUN mkdir -p /app
 WORKDIR /app
 
 # 将应用程序文件复制到容器中
