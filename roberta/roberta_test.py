@@ -13,9 +13,10 @@ def embedding_func(text: str):
     return output
 
 def benchmark(N, input_list, input_func, warmup=10):
-    for _ in range(warmup):
+    for i in range(warmup):
         for item in input_list:
             result = input_func(item)
+        print(f"warmup {i}: {time.time()}")
 
     start_time = time.time()
 
