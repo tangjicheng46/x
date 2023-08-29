@@ -27,7 +27,9 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-L
     rm -rf /var/lib/apt/lists/*
 
 # 安装 FastAPI 和 Torch
-RUN pip3 install --no-cache-dir fastapi uvicorn torch
+RUN pip3 install --no-cache-dir fastapi uvicorn
+
+RUN pip3 install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 # 清理不需要的包和缓存
 RUN conda clean -a -y
