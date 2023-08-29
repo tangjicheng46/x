@@ -15,7 +15,8 @@ RUN apt-get update && \
     libsm6 \
     libxrender1 \
     git \
-    curl
+    curl \
+    vim
 
 # 安装 Miniconda
 ENV CONDA_HOME /opt/conda
