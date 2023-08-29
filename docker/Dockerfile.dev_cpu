@@ -34,5 +34,11 @@ RUN pip3 install --no-cache-dir torch torchvision torchaudio --index-url https:/
 # 清理不需要的包和缓存
 RUN conda clean -a -y
 
-# 设置启动命令
-CMD ["/bin/bash"]
+# 设置工作目录
+WORKDIR /app
+
+# 将应用程序文件复制到容器中
+COPY app.py /app/app.py
+
+# 设置启动命令以保持容器运行
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
