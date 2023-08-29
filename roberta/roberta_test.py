@@ -42,5 +42,5 @@ if __name__ == "__main__":
     input_text = "./input_text.txt"
     input_list = read_lines_to_list(input_text)
 
-    benchmark(100, input_list, embedding_func)
+    benchmark(50, input_list, embedding_func)
 
