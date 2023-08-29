@@ -1,0 +1,40 @@
+# 使用基础镜像
+FROM ubuntu:20.04
+
+# 设置环境变量，避免交互式安装
+ENV DEBIAN_FRONTEND=noninteractive
+
+# 更新源并安装基本工具
+RUN apt-get update && \
+    apt-get install -y \
+    wget \
+    bzip2 \
+    ca-certificates \
+    libglib2.0-0 \
+    libxext6 \
+    libsm6 \
+    libxrender1 \
+    git
+
+# 安装 Miniconda
+ENV CONDA_HOME /opt/conda
+ENV PATH $CONDA_HOME/bin:$PATH
+
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh && \
+    /bin/bash /tmp/miniconda.sh -b -p $CONDA_HOME && \
+    rm /tmp/miniconda.sh && \
+    conda clean -tipsy && \
+    conda install -y python=3.10 && \
+    conda update -n base conda && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# 安装 FastAPI 和 Torch
+RUN conda install -y -c conda-forge fastapi && \
+    conda install -y -c pytorch torch
+
+# 设置工作目录
+WORKDIR /app
+
+# 设置启动命令
+CMD ["/bin/bash"]
