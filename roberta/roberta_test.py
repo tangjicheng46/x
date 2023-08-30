@@ -13,8 +13,10 @@ model = AutoModelForMaskedLM.from_pretrained("nlp-waseda/roberta-base-japanese",
 model.to(device)
 
 def embedding_func(text: str):
-    encoding = tokenizer([text,] * 5, return_tensors='pt')
-    output = model(**encoding)
+    encoding = tokenizer([text,] * 5, return_tensors='pt', padding=True, truncation=True)
+    encoding.to(device)  # Move encoding to CUDA if available
+    with torch.no_grad():
+        output = model(**encoding)
     return output
 
 def benchmark(N, input_list, input_func, warmup=10):
