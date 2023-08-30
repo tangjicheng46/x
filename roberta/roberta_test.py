@@ -1,11 +1,16 @@
 import time
+import torch
 import transformers
 from transformers import AutoTokenizer, AutoModelForMaskedLM
 
 cache_dir = "./temp"
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"device is {device}")
+
 tokenizer = AutoTokenizer.from_pretrained("nlp-waseda/roberta-base-japanese", cache_dir=cache_dir)
 model = AutoModelForMaskedLM.from_pretrained("nlp-waseda/roberta-base-japanese", cache_dir=cache_dir)
+model.to(device)
 
 def embedding_func(text: str):
     encoding = tokenizer([text,] * 5, return_tensors='pt')
