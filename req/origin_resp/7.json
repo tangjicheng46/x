@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "也许、次の10年では、さらに異なる製品が登場し、それに対応する製品の創造方法も現れるかもしれません。製品マネージャーとしても、インターネット市場の変化に合わせて、自身の製品の考え方を常に調整し変化させる必要があります。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnA07PLaqJIYabvgo4IM0D0YYTu",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 112,
+        "prompt_tokens": 103,
+        "total_tokens": 215
+    }
+}

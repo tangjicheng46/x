@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "製品リーチについて：製品リーチに関しては皆さんもお気づきかと思いますが、過去の新聞と現在のニュースアプリを比べると、ユーザーに届くまでの時間とコストは、紙の新聞の方が現在のインターネット情報よりもはるかに多いです。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnAnjtqoIz3wb8dtHWY5a8vhXKp",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 110,
+        "prompt_tokens": 128,
+        "total_tokens": 238
+    }
+}

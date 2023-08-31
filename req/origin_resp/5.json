@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "十数年前、インターネット市場が未開拓の青海に位置していたため、競争は増加傾向にありました。当時の製品開発方法は伝統的なウォーターフォール型開発に傾倒し、顧客獲得方法や収益化も比較的簡素で大胆でした。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnAaxuEnw6VKGoEbkGEUortnNAj",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 115,
+        "prompt_tokens": 120,
+        "total_tokens": 235
+    }
+}

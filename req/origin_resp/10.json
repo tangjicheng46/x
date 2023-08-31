@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "インターネットの登場により、ユーザーの認識、個別の体験、製品へのアクセスは全く新しい変化となりました。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnAoQnEfyXEHKCH2kNL3BvnqrsO",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 57,
+        "prompt_tokens": 68,
+        "total_tokens": 125
+    }
+}

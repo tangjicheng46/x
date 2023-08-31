@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "個性化体験について：個性化体験は、ユーザーの認識を基にして構築され、製品データを利用してユーザーの行動を把握し、分析し、ユーザーの視点を形成し、その後、異なるユーザーに対して個別の体験を提供するための戦略を採用することで、ユーザーの製品への認知度を向上させ、最終的に製品への信頼を高めます。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464605,
+    "id": "chatcmpl-7tVnBo5FPmx7F44jMmZFTWDzkNghK",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 173,
+        "prompt_tokens": 141,
+        "total_tokens": 314
+    }
+}

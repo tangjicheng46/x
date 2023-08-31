@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "しかしながら、数十年前までは、私たちはユーザーの意見を知るために、ユーザーインタビューなどの従来の方法しか持っていませんでした。しかし、今日ではユーザーの行動データや操作経路から、ユーザーを理解することが可能となりました（アキラはデータが常に正直であると信じています）。これにより、よりユーザーの真の思いを深く理解することができます。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnA6zK5F5WIi7s4gjOR1ilVgXLW",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 152,
+        "prompt_tokens": 136,
+        "total_tokens": 288
+    }
+}

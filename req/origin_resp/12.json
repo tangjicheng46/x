@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "ユーザーの行動データを通じて、より深くユーザーの心の中にある真の考えを理解することができます。ユーザーの認識に関しては、インターネットの発展に伴い、私たちはユーザーについてますます詳しく知ることができるようになりました。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnAJlrc5TqH4Nrr7XRx6Wa6Mh9A",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 110,
+        "prompt_tokens": 104,
+        "total_tokens": 214
+    }
+}

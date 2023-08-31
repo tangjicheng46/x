@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "１０数年後の今日、インターネットは市場の競争において存量の位置になり、より精密なオペレーションの方向に進化しています。プロダクトの創造においても、雷军先生が提唱する「小さなステップで素早く進む、迅速なイテレーション」の方法により、より傾向しています。新しいプロジェクトに対しては、「速い、正確、容赦ない」で市場に攻め込むことが多くなりました。また、発展中のプロジェクトに対しては、精密なオペレーションとデータ駆動のビジネス手法により、慎重にイテレーションを行っています。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnA9OTZO0idVbJGJMxGLi7Y8Oy6",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 241,
+        "prompt_tokens": 189,
+        "total_tokens": 430
+    }
+}

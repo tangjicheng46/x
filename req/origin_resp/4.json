@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "プロダクト思考は固定されたものではありません。時間の経過とともに、十数年前と現在では、社会情勢、インターネット市場、ユーザーの知覚が異なるものとなります。それに伴い、製品を作り上げる方法や思考の方向性も変化することでしょう。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnAUKC2CCcGfnzolqHECKBlkIYb",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 114,
+        "prompt_tokens": 114,
+        "total_tokens": 228
+    }
+}

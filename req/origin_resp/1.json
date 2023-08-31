@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "製品思考は、統一的で具体的な規範を持っていません。製品マネージャーのポジションは、現在までに明確な定義がなく、製品思考は製品ポジションの考え方の拡張として存在しますが、固定の定義はありません。企業の現状、業務プロセスや重点、個人の製品への理解度によって、それぞれの考え方や意見は異なる場合があります。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnAjgTR6GWspbpSJEJXSXA2w0u6",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 164,
+        "prompt_tokens": 163,
+        "total_tokens": 327
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "製品思考は必ずしも普遍的であるとは限りません。製品思考は変動しやすいため、普遍的ではないという特性があります。単純に言えば、他人の製品思考をまったく自分に適用できるとは限りません。他人の製品思考を直接自分の製品の仕事に応用しようとすると、「適応しづらさ」が生じることがよくあります。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnA7Ql6lYf8nxwMEK0YTf575OIt",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 151,
+        "prompt_tokens": 151,
+        "total_tokens": 302
+    }
+}

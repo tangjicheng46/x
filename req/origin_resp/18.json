@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "上記の内容を日本語に翻訳します：つまり、現在の製品がユーザーの手に入るコストが急速に低下する場合、製品担当者として、私たちは製品の効果を最大限に発揮するために時間と精力を注ぐことができます。同時に、製品に「自己伝播」という広告形態を加えることで、新しい価値を創造することができます。ただ一つ問題があります：吴彦祖はアプリが必要ですか？",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnA2iXZ7Qpe6f0NcvKOhCqdMwm7",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 178,
+        "prompt_tokens": 140,
+        "total_tokens": 318
+    }
+}

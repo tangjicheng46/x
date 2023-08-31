@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "あなたにはあなたなりの製品思考がありますし、私にも私なりの製品思考があります。それは一方的なものではありません。同時に、製品の観点や見解など、異なる友人たちとの結合を通じて、自身の思考方法（特に製品思考）と比較し、自身に適した製品思考をまとめることが、最も効果的で自己価値のある方法です。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnArOeti1pw50B3ZAL5LFZodhXS",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 147,
+        "prompt_tokens": 146,
+        "total_tokens": 293
+    }
+}

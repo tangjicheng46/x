@@ -1,0 +1,21 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "質問が提起されますが、異なる役割の人々は通常、彼らの職務に関連して異なる点に注目します。その理由は何でしょうか？一般的に、人々は特定の役職で長期間鍛錬を積むと、思考が徐々に変化し、職務の特性に基づいて考えるようになるからです。",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1693464604,
+    "id": "chatcmpl-7tVnAt2QOylucDwKrjNxnvLMfeBl4",
+    "model": "gpt-3.5-turbo-0613",
+    "object": "chat.completion",
+    "usage": {
+        "completion_tokens": 131,
+        "prompt_tokens": 130,
+        "total_tokens": 261
+    }
+}
