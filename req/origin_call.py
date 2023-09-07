@@ -39,9 +39,16 @@ async def main():
         with open(f"origin_resp/{idx}.json", 'w') as json_file:
             json.dump(response, json_file, indent=4, ensure_ascii=False)
 
-start_time = time.time()
-asyncio.run(main())
-end_time = time.time()
-cost_time = end_time - start_time
+def execute():
+    start_time = time.time()
+    asyncio.run(main())
+    end_time = time.time()
+    cost_time = end_time - start_time
 
-print(f"cost: {cost_time}")
+    print(f"cost: {cost_time}")
+
+
+if __name__ == "__main__":
+    for i in range(10):
+        print(i, end=",")
+        execute()
