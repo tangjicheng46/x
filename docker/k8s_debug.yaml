@@ -11,18 +11,6 @@ spec:
     metadata:
       labels:
         app: tang-debug
-      annotations:
-        vault.hashicorp.com/agent-inject: "true"
-        vault.hashicorp.com/agent-init-first: "true"
-        vault.hashicorp.com/agent-inject-token: "true"
-        vault.hashicorp.com/role: internal-staging-gc3a
-        vault.hashicorp.com/agent-pre-populate: "false" # Disalbe vault-agent-init to avoid istio-init issue
-        vault.hashicorp.com/agent-requests-cpu: "50m"
-        sidecar.istio.io/inject: "true"
-        sidecar.istio.io/proxyCPU: "50m"
-        prometheus.io/scrape-g123: "true"
-        prometheus.io/path-g123: "/metrics"
-        prometheus.io/port-g123: "8080"
     spec:
       containers:
       - name: tang-debug
