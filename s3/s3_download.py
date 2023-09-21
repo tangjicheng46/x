@@ -3,9 +3,9 @@ import io
 import os
 import time
 
-def read_s3_file_to_bytes(s3_uri):
+def origin_download(s3_uri):
     """
-    Read a file from an S3 URI and return its content as bytes using multipart download for optimization.
+    Read a file from an S3 URI and return its content as bytes.
 
     :param s3_uri: The S3 URI of the file to read (e.g., 's3://bucket-name/path/to/file.txt').
     :return: A tuple containing the file content as bytes and the download time in seconds.
@@ -23,32 +23,35 @@ def read_s3_file_to_bytes(s3_uri):
 
     start_time = time.time()  # 记录开始时间
 
-    # 获取文件大小
-    response = s3_client.head_object(Bucket=bucket_name, Key=object_key)
-    file_size = response['ContentLength']
+    # Download the object from S3
+    try:
+        response = s3_client.get_object(Bucket=bucket_name, Key=object_key)
+        s3_object = response['Body'].read()
 
-    # 分段下载
-    chunk_size = 1024 * 1024  # 1MB
-    num_parts = int(file_size / chunk_size) + 1
+        # Convert the S3 object to bytes
+        bytes_data = io.BytesIO(s3_object).read()
 
-    s3_object = b''  # 用于存储下载的文件内容
+        end_time = time.time()  # 记录结束时间
+        download_time = end_time - start_time  # 计算下载时间
 
-    for part_number in range(1, num_parts + 1):
-        start_byte = (part_number - 1) * chunk_size
-        end_byte = min(part_number * chunk_size - 1, file_size - 1)
-        response = s3_client.get_object(
-            Bucket=bucket_name,
-            Key=object_key,
-            Range=f'bytes={start_byte}-{end_byte}'
-        )
-        s3_object += response['Body'].read()
+        return bytes_data, download_time
 
-    end_time = time.time()  # 记录结束时间
-    download_time = end_time - start_time  # 计算下载时间
+    except Exception as e:
+        raise Exception(f"Error downloading {s3_uri}: {e}")
 
-    return s3_object, download_time
+def bench(func):
+    s3_uri_prefix = 's3://staging-g123-ai/sagemaker/model/diffusion_model/deploy/Stable-diffusion/'
+    model_list = ['artifex-g123-manga-local-translationtool-novelai.safetensors',
+                  'artifex--bluegirl-cardos.safetensors',
+                  'artifex-g123-manga-local-translationtool-novelai.safetensors',
+                  'artifex-isekaimaou-kyo04-novelai.safetensors',
+                  'artifex-isekaimaou-otomo_7-cardos.safetensors'
+                  ]
+    
+    for model_name in model_list:
+        s3_uri = s3_uri_prefix + model_name
+        file_bytes, download_time = func(s3_uri)
+        print(f"download {len(file_bytes)} bytes in {download_time} seconds.")
 
-# Example usage:
-s3_uri = 's3://staging-g123-ai/sagemaker/model/diffusion_model/deploy/Stable-diffusion/artifex-g123-manga-local-translationtool-novelai.safetensors'
-file_bytes, download_time = read_s3_file_to_bytes(s3_uri)
-print(f"Downloaded {len(file_bytes)} bytes in {download_time} seconds.")
+if __name__ == "__main__":
+    bench(origin_download)
