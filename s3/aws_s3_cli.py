@@ -21,7 +21,7 @@ def get_uri(filename, bucket_name):
 def download_s3_file_to_bytes(s3_uri):
     try:
         temp_file = "/tmp/temporary_s3_download_file"
-        subprocess.run(["aws", "s3", "cp", s3_uri, temp_file], check=True)
+        subprocess.run(["aws", "s3", "cp", s3_uri, temp_file, "--no-progress"], check=True)
         with open(temp_file, 'rb') as file:
             file_bytes = file.read()
         os.remove(temp_file)
