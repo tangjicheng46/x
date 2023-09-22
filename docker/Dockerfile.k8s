@@ -49,5 +49,7 @@ WORKDIR /app
 # 将应用程序文件复制到容器中
 COPY app.py /app/app.py
 
+RUN wget https://s3.amazonaws.com/mountpoint-s3-release/1.0.1/x86_64/mount-s3-1.0.1-x86_64.deb
+
 # 设置启动命令以保持容器运行
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
